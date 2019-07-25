@@ -2,7 +2,7 @@ package com.multicampus.biz.board;
 
 import java.sql.Date;
 
-// VO(Value Object) 클래스
+// 1. VO(Value Object) 클래스
 public class BoardVO {
 	private int seq;
 	private String title;

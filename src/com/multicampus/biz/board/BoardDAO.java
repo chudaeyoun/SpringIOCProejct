@@ -9,7 +9,7 @@ import java.util.List;
 
 import com.multicampus.biz.common.JDBCUtil;
 
-// DAO(Data Access Object) 클래스 
+// 2. DAO(Data Access Object) 클래스 
 public class BoardDAO {
 	// JDBC 관련 변수
 	private Connection conn;
@@ -24,8 +24,15 @@ public class BoardDAO {
 	private final String BOARD_GET    = "select * from board where seq=?";
 	private final String BOARD_LIST   = "select * from board order by seq desc";
 	
+	public BoardDAO() {
+		System.out.println("===> BoardDAO 생성");
+	}
+	
 	// BOARD 테이블과 관련된 CRUD 메소드
 	// 글 등록
+	/* (non-Javadoc)
+	 * @see com.multicampus.biz.board.BoardService#insertBoard(com.multicampus.biz.board.BoardVO)
+	 */
 	public void insertBoard(BoardVO vo) {
 		System.out.println("===> JDBC 기반으로 insertBoard() 기능 처리");
 		try {
@@ -43,6 +50,9 @@ public class BoardDAO {
 	}
 	
 	// 글 수정
+	/* (non-Javadoc)
+	 * @see com.multicampus.biz.board.BoardService#updateBoard(com.multicampus.biz.board.BoardVO)
+	 */
 	public void updateBoard(BoardVO vo) {
 		System.out.println("===> JDBC 기반으로 updateBoard() 기능 처리");
 		try {
@@ -60,6 +70,9 @@ public class BoardDAO {
 	}
 	
 	// 글 삭제
+	/* (non-Javadoc)
+	 * @see com.multicampus.biz.board.BoardService#deleteBoard(com.multicampus.biz.board.BoardVO)
+	 */
 	public void deleteBoard(BoardVO vo) {
 		System.out.println("===> JDBC 기반으로 deleteBoard() 기능 처리");
 		try {
@@ -75,6 +88,9 @@ public class BoardDAO {
 	}
 	
 	// 글 상세 조회
+	/* (non-Javadoc)
+	 * @see com.multicampus.biz.board.BoardService#getBoard(com.multicampus.biz.board.BoardVO)
+	 */
 	public BoardVO getBoard(BoardVO vo) {
 		BoardVO board = null;
 		System.out.println("===> JDBC 기반으로 getBoard() 기능 처리");
@@ -101,6 +117,9 @@ public class BoardDAO {
 	}
 	
 	// 글 목록 검색
+	/* (non-Javadoc)
+	 * @see com.multicampus.biz.board.BoardService#getBoardList()
+	 */
 	public List<BoardVO> getBoardList() {
 		System.out.println("===> JDBC 기반으로 getBoardList() 기능 처리");
 		List<BoardVO> boardList = new ArrayList<BoardVO>();
