@@ -7,9 +7,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
+
 import com.multicampus.biz.common.JDBCUtil;
 
 // 2. DAO(Data Access Object) 클래스 
+@Repository
 public class UserDAO {
 	// JDBC 관련 변수
 	private Connection conn;
