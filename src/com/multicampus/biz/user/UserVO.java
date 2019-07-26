@@ -1,6 +1,6 @@
 package com.multicampus.biz.user;
 
-// VO(Value Object) 클래스
+// 1. VO(Value Object) 클래스
 public class UserVO {
 	private String id;
 	private String password;

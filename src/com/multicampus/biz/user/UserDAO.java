@@ -9,7 +9,7 @@ import java.util.List;
 
 import com.multicampus.biz.common.JDBCUtil;
 
-// DAO(Data Access Object) 클래스 
+// 2. DAO(Data Access Object) 클래스 
 public class UserDAO {
 	// JDBC 관련 변수
 	private Connection conn;
@@ -23,6 +23,9 @@ public class UserDAO {
 	private final String USER_GET    = "select * from users where id=? and password=?";
 	private final String USER_LIST   = "select * from users order by name asc";
 	
+	public UserDAO() {
+		System.out.println("===> UserDAO 생성");
+	}
 	// USERS 테이블과 관련된 CRUD 메소드
 	// 회원 등록
 	public void insertUser(UserVO vo) {
